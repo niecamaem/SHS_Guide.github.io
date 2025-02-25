@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHS Survival Guide: Pick Your Path Like a Pro!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            margin: 0; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2 { 
+            color: #4a148c; 
+        }
+        ul { 
+            text-align: left; 
+            list-style: none; 
+            padding: 0; 
+        }
+        ul li { 
+            margin: 10px 0; 
+            font-size: 18px; 
+        }
+        a { 
+            text-decoration: none; 
+            color: #7b1fa2; 
+            font-weight: bold; 
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover { 
+            text-decoration: underline; 
+            color: #6a1b9a;
+        }
+        .tracks { 
+            display: flex; 
+            justify-content: space-around; 
+            margin-top: 20px; 
+            animation: fadeIn 2s ease-in-out;
+        }
+        .track-box { 
+            background: #fce4ec; 
+            padding: 15px; 
+            border-radius: 10px; 
+            width: 45%; 
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1); 
+            transition: transform 0.3s ease-in-out;
+        }
+        .track-box:hover {
+            transform: scale(1.05);
+        }
+        nav { 
+            background: #8e24aa; 
+            padding: 10px; 
+            margin-top: 20px; 
+            border-radius: 10px; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 15px; 
+            font-weight: bold; 
+            font-size: 18px; 
+        }
+        .comparison { 
+            margin-top: 20px; 
+            padding: 15px; 
+            background: #f8bbd0; 
+            border-radius: 10px; 
+            animation: fadeIn 3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SHS Survival Guide: Pick Your Path Like a Pro!</h1>
+        <p>Confused about which Senior High School (SHS) strand to choose? No worries! We’ve got your back. Explore your options, dodge regret, and make a choice your future self will thank you for!</p>
+        
+        <h2>Discover Your Ideal SHS Track</h2>
+        <div class="tracks">
+            <div class="track-box">
+                <h3>Academic Track</h3>
+                <p>For future doctors, engineers, lawyers, or anyone dreaming of a university life full of research, coffee, and sleepless nights.</p>
+                <a href="academic.html">Learn More</a>
+            </div>
+            <div class="track-box">
+                <h3>TVL Track</h3>
+                <p>For hands-on learners who prefer skills over theories. Whether it's tech, food, or business, you'll be job-ready ASAP!</p>
+                <a href="tvl.html">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="comparison">
+            <h2>Can’t Decide? Let’s Compare!</h2>
+            <p>Still stuck between Academic and TVL? No worries! We break it down for you so you can finally sleep soundly at night.</p>
+            <a href="academic_vs_tvl.html">Compare Now</a>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="academic_vs_tvl.html">Academic vs. TVL</a>
+        <a href="academic.html">Academic Track</a>
+        <a href="tvl.html">TVL Track</a>
+    </nav>
+</body>
+</html>

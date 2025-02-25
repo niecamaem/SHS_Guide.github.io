@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Track vs. TVL Track</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #6a0dad, #b19cd9);
+            margin: 0; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+            text-align: justify;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2 { color: #4b0082; text-align: center; }
+        p { font-size: 18px; line-height: 1.6; opacity: 0; transition: opacity 1s ease-in-out; }
+        ul { text-align: left; }
+        a { 
+            text-decoration: none; 
+            font-weight: bold; 
+            color: #8a2be2; 
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover { text-decoration: underline; color: #9400d3; }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            background: #8a2be2; 
+            color: white; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-btn:hover { 
+            background: #6a0dad; 
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Academic Track vs. TVL Track: Which Path Leads to Your Future?</h1>
+        <p>Choosing a senior high school track is like picking your character in a video game—each option comes with its own strengths, challenges, and ultimate rewards. Do you prefer a journey filled with theories, research, and preparation for higher education? Or would you rather gain hands-on experience and job-ready skills right away? Welcome to the great debate: <strong>Academic Track vs. Technical-Vocational-Livelihood (TVL) Track</strong>—two roads leading to success, but with different routes and destinations.</p>
+        
+        <h2>The Academic Track: The Road to Higher Learning</h2>
+        <p>If you’ve ever dreamed of becoming a doctor, lawyer, engineer, or business mogul, the <strong>Academic Track</strong> is your stepping stone. Designed for students who plan to pursue college degrees, this track sharpens analytical skills, deepens theoretical knowledge, and hones research abilities.</p>
+        
+        <h3>What makes the Academic Track special?</h3>
+        <ul>
+            <li>Offers specialized strands such as <strong>STEM, HUMSS, ABM, and GAS</strong> to cater to different interests.</li>
+            <li>Prepares students for the rigors of college life with intensive academic subjects.</li>
+            <li>Develops critical thinking and problem-solving skills essential for university studies and professional careers.</li>
+            <li>Opens doors to a wide range of white-collar professions, from medicine and law to business and education.</li>
+        </ul>
+        
+        <h2>The TVL Track: Skills Today, Career Tomorrow</h2>
+        <p>Not a fan of drowning in books and theories? The <strong>TVL Track</strong> might be your perfect match! This track focuses on hands-on learning, practical skills, and industry-based training that prepares students for employment, entrepreneurship, or further technical studies.</p>
+        
+        <h3>What makes the TVL Track awesome?</h3>
+        <ul>
+            <li>Provides job-ready skills through specialized strands like <strong>ICT, Home Economics, Industrial Arts, and Arts & Design</strong>.</li>
+            <li>Offers students the chance to earn <strong>National Certificates (NCs)</strong> from TESDA, making them employable right after high school.</li>
+            <li>Encourages creativity, problem-solving, and technical expertise in real-world settings.</li>
+            <li>Perfect for those who want to start a business, work abroad, or join the workforce immediately.</li>
+        </ul>
+        
+        <h2>The Verdict: Which One is Better?</h2>
+        <p>Here’s the plot twist—<strong>neither track is better than the other</strong>. It all depends on your career goals, strengths, and personal preferences. If you see yourself excelling in academics and aiming for professional careers, the <strong>Academic Track</strong> is your gateway. But if you want to develop specialized skills, work right after high school, or even start a business, the <strong>TVL Track</strong> is your best bet.</p>
+        
+        <h2>The Best Choice? The One That’s Right for You!</h2>
+        <p>At the end of the day, what matters most is where your heart (and mind) leads you. Whether you choose the <strong>Academic Track</strong> to conquer college or the <strong>TVL Track</strong> to master skills, both paths offer exciting opportunities for success. Remember, your future is not just about the track you take—it’s about how you make the most of it. So, which journey will you embark on?</p>
+        
+        <a class="back-btn" href="index.html">⬅ Back to Home</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let paragraphs = document.querySelectorAll("p");
+            let options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1
+            };
+            let observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            }, options);
+            paragraphs.forEach(p => {
+                observer.observe(p);
+            });
+        });
+    </script>
+</body>
+</html>

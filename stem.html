@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Strand</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #8B0000, #FF6347);
+            margin: 0; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+            text-align: justify;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2 { color: #8B0000; text-align: center; }
+        p { font-size: 18px; line-height: 1.6; opacity: 0; transition: opacity 1s ease-in-out; }
+        ul { text-align: left; }
+        a { 
+            text-decoration: none; 
+            font-weight: bold; 
+            color: #DC143C; 
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover { text-decoration: underline; color: #B22222; }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            background: #DC143C; 
+            color: white; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-btn:hover { 
+            background: #8B0000; 
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>STEM (Science, Technology, Engineering, and Mathematics)</h1>
+        <p>STEM is for students interested in science, technology, engineering, and math-related careers.</p>
+
+        <h2>STEM: The Bridge to Innovation and Discovery</h2>
+        <p>Every great invention, from the smartphone in your pocket to the vaccine that saves lives, exists because of people who dared to explore the unknown. The <strong>STEM strand (Science, Technology, Engineering, and Mathematics)</strong> is the perfect choice for those who love to ask, "What if?" and "How can we make this better?" It is a path that leads to discovery, innovation, and endless possibilities.</p>
+
+        <h2>The Power of STEM: Fueling Progress</h2>
+        <p>The world thrives on progress, and STEM is at the heart of it. It is the key to developing groundbreaking technologies, advancing medical treatments, and solving the most pressing challenges humanity faces. Choosing STEM means stepping into a field that does not just follow change—it <strong>creates</strong> it. If you have ever been fascinated by how things work, dreamed of building something new, or wanted to make life better for others, STEM is the strand for you.</p>
+
+        <h2>Why Choose STEM? The Benefits of Science and Innovation</h2>
+        <ul>
+            <li><strong>Endless Career Opportunities:</strong> A STEM education opens doors to <strong>high-demand careers</strong> in medicine, engineering, information technology, environmental science, and more.</li>
+            <li><strong>Developing Critical Thinking and Problem-Solving Skills:</strong> STEM is not about memorizing facts; it is about <strong>solving real-world problems</strong>.</li>
+            <li><strong>A Platform for Creativity and Innovation:</strong> Some of the most successful innovations started with a simple idea and a passion for solving problems.</li>
+            <li><strong>Job Security and Competitive Salaries:</strong> Careers in STEM-related fields often offer <strong>higher salaries</strong> and <strong>greater stability</strong>.</li>
+            <li><strong>Making a Difference in the World:</strong> STEM careers directly impact society, from doctors curing diseases to engineers designing sustainable cities.</li>
+        </ul>
+
+        <h2>Learn More About STEM</h2>
+        <ul>
+            <li><a href="https://www.techtarget.com/whatis/definition/STEM-science-technology-engineering-and-mathematics" target="_blank">What is STEM? - TechTarget</a></li>
+            <li><a href="https://reedleyschool.edu.ph/blog/overview-of-stem-strand-and-curriculum/" target="_blank">Overview of STEM Strand - Reedley School</a></li>
+            <li><a href="https://www.twinscience.com/en/blog/top-10-benefits-of-stem-education/" target="_blank">Top 10 Benefits of STEM Education - Twin Science</a></li>
+            <li><a href="https://www.tumblr.com/denisenicole/655074725941444608/why-stem-is-the-best-choice-for-you" target="_blank">Why STEM is the Best Choice - Tumblr</a></li>
+        </ul>
+
+        <a class="back-btn" href="academic.html">⬅ Back to Academic Track</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let paragraphs = document.querySelectorAll("p");
+            let options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1
+            };
+            let observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            }, options);
+            paragraphs.forEach(p => {
+                observer.observe(p);
+            });
+        });
+    </script>
+</body>
+</html>

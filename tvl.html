@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVL Track | SHS Guide</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #6a0dad, #b19cd9);
+            margin: 0; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+            text-align: justify;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2 { color: #4b0082; text-align: center; }
+        p { font-size: 18px; line-height: 1.6; opacity: 0; transition: opacity 1s ease-in-out; }
+        .strand-box { 
+            background: rgba(138, 43, 226, 0.1); 
+            padding: 15px; 
+            border-radius: 10px; 
+            margin-bottom: 15px; 
+            border-left: 5px solid #8a2be2;
+            transition: transform 0.3s ease-in-out;
+        }
+        .strand-box:hover {
+            transform: scale(1.05);
+        }
+        a { 
+            text-decoration: none; 
+            font-weight: bold; 
+            color: #8a2be2; 
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover { text-decoration: underline; color: #9400d3; }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            background: #8a2be2; 
+            color: white; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-btn:hover { 
+            background: #6a0dad; 
+            transform: scale(1.05);
+        }
+        ul { 
+            list-style-type: none; 
+            padding: 0; 
+        }
+        li::before {
+            content: "\2022";
+            color: #8a2be2;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TVL (Technical-Vocational-Livelihood) Track</h1>
+        <p>Practical skills. Real-world experience. Job readiness. The TVL Track prepares students for success beyond the classroom.</p>
+        
+        <h2>TVL Specializations</h2>
+        <div class="strand-box">
+            <h2><a href="tvl_home_economics.html">🏠 Home Economics</a></h2>
+            <p>Master culinary arts, fashion design, hospitality, and wellness services.</p>
+        </div>
+        <div class="strand-box">
+            <h2><a href="tvl_industrial.html">🔧 Industrial Arts</a></h2>
+            <p>Learn carpentry, electrical installation, welding, and automotive servicing.</p>
+        </div>
+        <div class="strand-box">
+            <h2><a href="tvl_ict.html">💻 ICT (Information and Communications Technology)</a></h2>
+            <p>Dive into coding, web development, animation, and computer hardware servicing.</p>
+        </div>
+        <div class="strand-box">
+            <h2><a href="arts.html">🎨 Arts & Design</a></h2>
+            <p>Explore painting, design, music, dance, theater, and media arts.</p>
+        </div>
+
+        <h2>Why Choose the TVL Track?</h2>
+        <ul>
+            <li>Gain hands-on experience in various technical fields.</li>
+            <li>Be job-ready immediately after Senior High School.</li>
+            <li>Start your own business and become an entrepreneur.</li>
+            <li>Work locally or internationally with in-demand skills.</li>
+            <li>Still have the option to pursue college education.</li>
+        </ul>
+        
+        <p>Choosing TVL is not just a decision—it’s a step toward a successful future.</p>
+        
+        <a class="back-btn" href="index.html">⬅ Back to Home</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let paragraphs = document.querySelectorAll("p");
+            let options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1
+            };
+            let observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            }, options);
+            paragraphs.forEach(p => {
+                observer.observe(p);
+            });
+        });
+    </script>
+</body>
+</html>

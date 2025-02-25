@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Track | SHS Guide</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #6a0dad, #b19cd9);
+            margin: 0; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+            text-align: justify;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2 { color: #4b0082; text-align: center; }
+        p { font-size: 18px; line-height: 1.6; opacity: 0; transition: opacity 1s ease-in-out; }
+        .strand-box { 
+            background: rgba(138, 43, 226, 0.1); 
+            padding: 15px; 
+            border-radius: 10px; 
+            margin-bottom: 15px; 
+            border-left: 5px solid #8a2be2;
+            transition: transform 0.3s ease-in-out;
+        }
+        .strand-box:hover {
+            transform: scale(1.05);
+        }
+        a { 
+            text-decoration: none; 
+            font-weight: bold; 
+            color: #8a2be2; 
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover { text-decoration: underline; color: #9400d3; }
+        .back-btn { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            background: #8a2be2; 
+            color: white; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-btn:hover { 
+            background: #6a0dad; 
+            transform: scale(1.05);
+        }
+        ul { 
+            list-style-type: none; 
+            padding: 0; 
+        }
+        li::before {
+            content: "\2022";
+            color: #8a2be2;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Academic Track: Unlocking the Door to Your Future</h1>
+
+        <p>Imagine standing at a crossroads, each path leading to a different adventure...</p>
+
+        <p>Senior High School marks a turning point in every student’s journey...</p>
+
+        <h2>Academic Strands</h2>
+
+        <div class="strand-box">
+            <h2><a href="stem.html">🧪 STEM (Science, Technology, Engineering, and Mathematics)</a></h2>
+            <p>Do you dream of building robots, curing diseases, or designing the next revolutionary technology?...</p>
+        </div>
+
+        <div class="strand-box">
+            <h2><a href="humss.html">📖 HUMSS (Humanities and Social Sciences)</a></h2>
+            <p>If you have a passion for storytelling, public speaking, or understanding human behavior...</p>
+        </div>
+
+        <div class="strand-box">
+            <h2><a href="abm.html">💼 ABM (Accountancy, Business, and Management)</a></h2>
+            <p>Are you an aspiring entrepreneur, financial expert, or marketing strategist?...</p>
+        </div>
+
+        <div class="strand-box">
+            <h2><a href="gas.html">📚 GAS (General Academic Strand)</a></h2>
+            <p>Still unsure about your future career? GAS offers a flexible curriculum...</p>
+        </div>
+
+        <h2>Is the Academic Track Right for You?</h2>
+        <p>Choose this track if you:</p>
+        <ul>
+            <li>Plan to pursue higher education in college or university.</li>
+            <li>Enjoy learning through research, critical thinking, and analysis.</li>
+            <li>Aspire for careers in science, business, humanities, law, or education.</li>
+            <li>Thrive in theoretical discussions and academic challenges.</li>
+        </ul>
+
+        <p>Choosing the right path is a big decision, but remember—there’s no single right way to success...</p>
+
+        <a class="back-btn" href="index.html">⬅ Back to Home</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let paragraphs = document.querySelectorAll("p");
+            let options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1
+            };
+            let observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            }, options);
+            paragraphs.forEach(p => {
+                observer.observe(p);
+            });
+        });
+    </script>
+</body>
+</html>
